@@ -46,8 +46,7 @@
               "tools": true
             },
             "display_name": "难题给强模型，简单的给便宜模型 · routing group",
-            "max_output_tokens": 128000,
-            "max_tokens": 1128000,
+            "max_tokens": 1000000,
             "name": "group/smart-split",
             "reasoning_effort": "high"
           },
@@ -1288,6 +1287,19 @@
             "display_name": "DeepSeek-Flash · Qoder CN",
             "max_tokens": 1000000,
             "name": "qoder-cn/dfmodel",
+            "reasoning_effort": "high"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "tools": true
+            },
+            "display_name": "GLM-5.4 · Qoder CN",
+            "max_tokens": 1000000,
+            "name": "qoder-cn/gmodel_latest",
             "reasoning_effort": "high"
           },
           {
