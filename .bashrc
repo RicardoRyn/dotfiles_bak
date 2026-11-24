@@ -49,9 +49,6 @@ alias la='eza -la --icons --git --group-directories-first'
 alias lt='eza --tree --icons --group-directories-first'
 alias jf='jj git fetch'
 alias jp='jj git push'
-alias sshruanjx='ssh ruanjx@192.168.22.171'
-alias sshnhp='ssh nhp@192.168.3.103'
-alias llamarjx='llama-server -m ~/ricardo/local_models/Hy-MT2-7B-Q8_0.gguf -c 16384 -ngl all --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --temp 0.7 --top-p 0.6 --top-k 20 --repeat-penalty 1.05 -n 4096 --jinja --host 0.0.0.0'
 
 # tmux 自动启动
 # if [[ -z "$TMUX" ]] && [[ -n "$PS1" ]]; then

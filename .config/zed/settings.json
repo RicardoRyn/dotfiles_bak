@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "magpie-artifacts": {
+      "command": "/Applications/magpie.app/Contents/MacOS/magpie",
+      "args": [
+        "mcp",
+        "artifacts"
+      ]
+    }
+  },
   "proxy": "",
   "which_key": {
     "enabled": null
@@ -46,7 +55,8 @@
               "tools": true
             },
             "display_name": "难题给强模型，简单的给便宜模型 · routing group",
-            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "max_tokens": 1128000,
             "name": "group/smart-split",
             "reasoning_effort": "high"
           },
@@ -1208,6 +1218,20 @@
             "max_output_tokens": 131072,
             "max_tokens": 1179648,
             "name": "zhipu/glm-5.3-flashx-legal",
+            "reasoning_effort": "high"
+          },
+          {
+            "capabilities": {
+              "chat_completions": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "tools": true
+            },
+            "display_name": "GLM-5.4 · Zhipu GLM",
+            "max_output_tokens": 131072,
+            "max_tokens": 1131072,
+            "name": "zhipu/glm-5.4",
             "reasoning_effort": "high"
           },
           {
