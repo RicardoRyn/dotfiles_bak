@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "magpie-artifacts": {
+      "command": "D:\\magpie\\magpie.exe",
+      "args": [
+        "mcp",
+        "artifacts"
+      ]
+    }
+  }
+}
