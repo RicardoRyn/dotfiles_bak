@@ -2,24 +2,21 @@
   name = Ricardo_T8
   email = ricardoryn1317@gmail.com
   signingkey = 6D3481138D9D0B12
-[credential "https://gitee.com"]
-  provider = generic
 [init]
   defaultBranch = main
-[include]
-  path = C:/Users/RicardoRyn/dotfiles/catppuccin.gitconfig
+[commit]
+  gpgsign = true
+[merge]
+  conflictStyle = zdiff3
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  line-numbers = true
+  features = catppuccin-latte
 [core]
   pager = delta
   autocrlf = input
 [interactive]
   diffFilter = delta --color-only
-[delta]
-  navigate = true  # use n and N to move between diff sections
-  line-numbers = true
-  features = catppuccin-latte
-[merge]
-  conflictStyle = zdiff3
-[credential "https://codeberg.org"]
-  provider = generic
-[commit]
-  gpgsign = true
+[include]
+  path = C:/Users/RicardoRyn/dotfiles/catppuccin.gitconfig
