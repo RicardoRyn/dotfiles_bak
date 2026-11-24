@@ -7,7 +7,6 @@ alias lj = lazyjj -r "all()"
 alias ju = jjui -r "all()"
 alias jf = jj git fetch
 alias jp = jj git push
-alias rjxssh = ssh ruanjx@192.168.22.171
 
 $env.config = {
   hooks: {
@@ -43,8 +42,6 @@ $env.config = {
 
 $env.EDITOR = "nvim"
 $env.CONDA_NO_PROMPT = true  # 不显示conda的环境提示，由starship接管
-$env.NHP_SAMBASHARE = "\\\\192.168.3.103\\nhp_sambashare"
-$env.MI_SAMBASHARE = "\\\\192.168.3.102\\MI_sambashare"
 
 source ~/.zoxide.nu
 use ~/appdata/roaming/nushell/virtual_environments/nu_conda_2/conda.nu

@@ -12,7 +12,9 @@
     "npm:pi-rewind",
     "npm:pi-exa",
     "npm:@plannotator/pi-extension",
-    "npm:@vndv/pi-codegraph"
+    "npm:@vndv/pi-codegraph",
+    "npm:pi-tidy",
+    "npm:pi-btw"
   ],
   "editorPaddingX": 0,
   "outputPad": 0,

@@ -9,22 +9,22 @@ export def --env y [...args] {
   rm -fp $tmp
 }
 
-export def --env nvim [...args] {
-  $env.NVIM_APPNAME = "nvim"
-  ^nvim ...$args
+export def --env nvim [...args: string] {
+    let log = ($env.TEMP? | default $env.TMP? | default "/tmp") + $"/nvim-startup-(random uuid).log"
+    with-env { NVIM_STARTUP_LOG: $log } {
+        ^nvim --startuptime $log ...$args
+    }
+    let rc = $env.LAST_EXIT_CODE
+    try {
+        rm -f $log
+    } catch {
+    }
+    if $rc != 0 {
+        error make { msg: $"nvim exited with code ($rc)" }
+    }
 }
 
-export def --env nvimbak [...args] {
-  $env.NVIM_APPNAME = "nvim-bak"
-  ^nvim ...$args
-}
-
-export def --env mininvim [...args] {
-  $env.NVIM_APPNAME = "nvim-mini"
-  ^nvim ...$args
-}
-
-export def --env nvimpure [...args] {
-  $env.NVIM_APPNAME = "nvim-pure"
+export def --env nvim_pure [...args] {
+  $env.NVIM_APPNAME = "nvim_pure"
   ^nvim ...$args
 }
