@@ -1,9 +1,11 @@
 [user]
-  name = Ricardo_T8
+  name = RicardoRyn
   email = ricardoryn1317@gmail.com
-  signingkey = 6D3481138D9D0B12
+  signingkey = C:\\Users\\RicardoRyn\\.ssh/id_rsa.pub
 [init]
   defaultBranch = main
+[gpg]
+  format = ssh
 [commit]
   gpgsign = true
 [merge]

@@ -7,6 +7,7 @@ alias lj = lazyjj -r "all()"
 alias ju = jjui -r "all()"
 alias jf = jj git fetch
 alias jp = jj git push
+alias ts = tailscale
 
 $env.config = {
   hooks: {

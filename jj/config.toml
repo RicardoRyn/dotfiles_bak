@@ -1,8 +1,19 @@
-"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+#:$schema https://jj-vcs.github.io/jj/latest/config-schema.json
 
 [user]
-name = "Ricardo_T8"
+name = "RicardoRyn"
 email = "ricardoryn1317@gmail.com"
+
+[signing]
+backend = "ssh"
+key = "~/.ssh/id_rsa.pub"
+
+[git]
+write-change-id-header = true
+private-commits = '''description(glob:'WIP:*')'''
+
+[revsets]
+git-sign-on-push = "~signed() & mine()"
 
 [ui]
 default-command = "log"
@@ -10,31 +21,28 @@ editor = "nvim"
 diff-instructions = false
 diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
 merge-editor = ["nvim", "-c", "MergeEditor $base $left $right $output $path"]
-# merge-editor = "diffbandit"
-# diff-editor = "diffbandit"
-
-[merge-tools.diffbandit]
-program = "diffbandit"   # bin/diffbandit on PATH
-merge-args = ["merge", "$base", "$left", "$right", "$output", "--path", "$path"]
-edit-args = ["edit", "$left", "$right"]
-diff-args = ["diff", "$left", "$right"]
-merge-tool-edits-conflict-markers = false
-
-[git]
-write-change-id-header = true
-private-commits = '''description(glob:'WIP:*')'''
+show-cryptographic-signatures = true
 
 [template-aliases]
 "format_short_signature(signature)" = "signature.name()"
 "format_timestamp(timestamp)" = "timestamp.ago()"
 
+[revset-aliases]
+"closest_merge(to)" = "heads(::to & merges())"
+
 [aliases]
 l = ["log", "-r", "::", "-n", "20"]
+# `jj stack <revset>` to include specific revs
+stack = ["rebase", "--after", "trunk()", "--before", "closest_merge(@)", "--revision"]
+# `jj stage` to include the whole stack after the megamerge
+stage = ["stack", "closest_merge(@)+:: ~ empty()"]
+# `jj restack` to rebase your changes onto `trunk()`
+restack = ["rebase", "--onto", "trunk()", "--source", "roots(trunk()..) & mutable()", "--simplify-parents"]
+
+[working-copy]
+eol-conversion = "input"
 
 [colors]
 "diff removed token" = { bg = "#eac8d3", underline = false, crossed-out = true }
 "diff added token" = { bg = "#d0e2d1", underline = false }
 "diff context" = { dim = true }
-
-[working-copy]
-eol-conversion = "input"
