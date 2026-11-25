@@ -15,5 +15,10 @@ patch:
     # 开启逗号句号翻页
     - { when: paging, accept: comma, send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
+  # 关闭 default.yaml 中的 Ctrl+Shift+3/4 中英标点、简繁切换（索引从 0 开始）
+  "key_binder/bindings/@6": null  # Control+Shift+3 切换中英标点
+  "key_binder/bindings/@7": null  # Control+Shift+numbersign 切换中英标点
+  "key_binder/bindings/@8": null  # Control+Shift+4 切换简繁
+  "key_binder/bindings/@9": null  # Control+Shift+dollar 切换简繁
   # recognizer/patterns/+:
   #     uppercase: ".*[A-Z].*"

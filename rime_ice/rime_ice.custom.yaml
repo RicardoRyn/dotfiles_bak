@@ -6,5 +6,4 @@ patch:
       - derive/ing$/in/
   switches/+:
     - name: ascii_mode
-      states: [ 中, Ａ ]
       reset: 1

@@ -7,6 +7,7 @@ email = "ricardoryn1317@gmail.com"
 [signing]
 backend = "ssh"
 key = "~/.ssh/id_rsa.pub"
+backends.ssh.allowed-signers = "~/.ssh/allowed_signers"
 
 [git]
 write-change-id-header = true
@@ -42,7 +43,7 @@ restack = ["rebase", "--onto", "trunk()", "--source", "roots(trunk()..) & mutabl
 [working-copy]
 eol-conversion = "input"
 
-[colors]
-"diff removed token" = { bg = "#eac8d3", underline = false, crossed-out = true }
-"diff added token" = { bg = "#d0e2d1", underline = false }
-"diff context" = { dim = true }
+# [colors]
+# "diff removed token" = { bg = "#eac8d3", underline = false, crossed-out = true }
+# "diff added token" = { bg = "#d0e2d1", underline = false }
+# "diff context" = { dim = true }
