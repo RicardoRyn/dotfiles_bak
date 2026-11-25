@@ -1,5 +1,6 @@
 [keys]
 "Alt + Z" = "toggle_space_activated"
+"Alt + Return" = { exec = ["rex", "do", "client.window.new"] }
 "Alt + Shift + R" = { exec = ["rift-cli", "execute", "config", "reload"] }
 "Alt + Y"= { exec = ["rift-cli", "execute", "window", "resize-by", "--amount=-0.1"] }
 "Alt + O"= { exec = ["rift-cli", "execute", "window", "resize-by", "--amount=0.1"] }

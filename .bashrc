@@ -46,9 +46,10 @@ alias grep='grep --color=auto'
 alias ls='eza --icons --group-directories-first'
 alias ll='eza -l --icons --git --group-directories-first'
 alias la='eza -la --icons --git --group-directories-first'
-alias lt='eza --tree --icons --group-directories-first'
+alias lt='eza --tree --group-directories-first'
 alias jf='jj git fetch'
 alias jp='jj git push'
+alias ts='tailscale'
 
 # tmux 自动启动
 # if [[ -z "$TMUX" ]] && [[ -n "$PS1" ]]; then

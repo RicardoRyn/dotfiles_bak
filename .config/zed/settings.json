@@ -1006,7 +1006,7 @@
             },
             "display_name": "deepseek-v4-pro-0813 · Bailian Token Plan",
             "max_output_tokens": 384000,
-            "max_tokens": 1384000,
+            "max_tokens": 1432576,
             "name": "bailian-token-plan/deepseek-v4-pro-0813",
             "reasoning_effort": "high"
           },
@@ -1214,9 +1214,9 @@
               "prompt_cache_key": false,
               "tools": true
             },
-            "display_name": "GLM 5.3 FlashX Legal · Zhipu GLM",
+            "display_name": "GLM-5.3-FlashX-Legal · Zhipu GLM",
             "max_output_tokens": 131072,
-            "max_tokens": 1179648,
+            "max_tokens": 1131072,
             "name": "zhipu/glm-5.3-flashx-legal",
             "reasoning_effort": "high"
           },

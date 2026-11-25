@@ -1,5 +1,10 @@
 [user]
-  name = Ricardo
+  name = RicardoRyn
   email = ricardoryn1317@gmail.com
+  signingkey = /Users/ricardo/.ssh/id_rsa.pub
 [init]
   defaultBranch = main
+[gpg]
+  format = ssh
+[commit]
+  gpgsign = true
