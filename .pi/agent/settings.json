@@ -8,11 +8,9 @@
   "hideThinkingBlock": false,
   "extensions": [],
   "packages": [
-    "npm:@gotgenes/pi-permission-system",
     "npm:pi-rewind",
     "npm:pi-exa",
     "npm:@plannotator/pi-extension",
-    "npm:@vndv/pi-codegraph",
     "npm:pi-tidy",
     "npm:pi-btw"
   ],
