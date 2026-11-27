@@ -7,15 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "context_servers": {
-    "magpie-artifacts": {
-      "command": "/Applications/magpie.app/Contents/MacOS/magpie",
-      "args": [
-        "mcp",
-        "artifacts"
-      ]
-    }
+  "edit_predictions": {
+    "provider": "copilot"
   },
+  "context_servers": {},
   "proxy": "",
   "which_key": {
     "enabled": null
@@ -935,8 +930,8 @@
               "tools": true
             },
             "display_name": "qwen3.7-plus · Bailian Token Plan",
-            "max_output_tokens": 64000,
-            "max_tokens": 1064000,
+            "max_output_tokens": 131072,
+            "max_tokens": 1131072,
             "name": "bailian-token-plan/qwen3.7-plus",
             "reasoning_effort": "high"
           },
@@ -1006,7 +1001,7 @@
             },
             "display_name": "deepseek-v4-pro-0813 · Bailian Token Plan",
             "max_output_tokens": 384000,
-            "max_tokens": 1432576,
+            "max_tokens": 1384000,
             "name": "bailian-token-plan/deepseek-v4-pro-0813",
             "reasoning_effort": "high"
           },
@@ -1020,7 +1015,7 @@
             },
             "display_name": "deepseek-v4-flash-0731 · Bailian Token Plan",
             "max_output_tokens": 384000,
-            "max_tokens": 1432576,
+            "max_tokens": 1384000,
             "name": "bailian-token-plan/deepseek-v4-flash-0731",
             "reasoning_effort": "high"
           },

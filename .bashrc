@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # PATH 与环境变量
-[[ -f ~/.bashrc.local ]] && source ~/.bashrc.local
+[[ -f ~/.bashrc.env ]] && source ~/.bashrc.env
 case ":$PATH:" in
 *":$HOME/.local/bin:"*) ;;
 *) export PATH="$HOME/.local/bin:$PATH" ;;
